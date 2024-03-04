@@ -8,7 +8,8 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-#Three.js
+# Three.js
+
 Three.js is a powerful, open-source library for creating stunning 3D visuals on the web.
 
 #React Three Fiber
