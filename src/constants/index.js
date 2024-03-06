@@ -23,9 +23,9 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    twitter,
 } from "../assets/icons";
-
+import x from '../assets/icons/x.png';
 export const skills = [
     {
         imageUrl: css,
@@ -166,9 +166,9 @@ export const experiences = [
 
 export const socialLinks = [
     {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/contact',
+        name: 'X',
+        iconUrl: x,
+        link: 'https://twitter.com/dhaar71',
     },
     {
         name: 'GitHub',

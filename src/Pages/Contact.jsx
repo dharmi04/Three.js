@@ -4,7 +4,7 @@ import { Suspense, useRef, useState } from "react";
 
 import { Fox } from "../models/Fox";
 import useAlert from "../hooks/useAlert";
-
+import { socialLinks } from "../constants";
 import Loader from '../Components/Loader'
 import Alert from "../Components/Alert";
 
@@ -74,6 +74,8 @@ const Contact = () => {
   };
 
   return (
+    <div>
+
     <section className='relative flex lg:flex-row flex-col max-container'>
       {alert.show && <Alert {...alert} />}
 
@@ -169,6 +171,46 @@ const Contact = () => {
         </Canvas>
       </div>
     </section>
+    <footer>
+    <div className='flex flex-wrap my-15 gap-4 justify-center items-center mb-3'>
+  {socialLinks.map((link) => (
+    <div className='' key={link.name}>
+      <div className='block-container w-8 h-8'>
+        <div className='btn-back rounded-xl' />
+        <div className='btn-front rounded-xl flex justify-center items-center'>
+          <a
+          href={link.link}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='font-semibold text-blue-600'>
+            
+          <img
+            src={link.iconUrl}
+            alt={link.name}
+            className='object-contain'
+          />
+          </a>
+        </div>
+      </div>
+
+      {/* <div className='mt-2 flex flex-col'>
+        <div className='mt-5 flex items-center gap-2 font-poppins'>
+          <a
+            href={link.link}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='font-semibold text-blue-600'
+          >
+            Visit {link.name}
+          </a>
+        </div>
+      </div> */}
+    </div>
+  ))}
+</div>
+
+    </footer>
+    </div>
   );
 };
 
